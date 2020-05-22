@@ -28,7 +28,7 @@
   	</nav>
   </header>
   <main>
-  	<h1>Дизайн-студия Нёрдс</h1>
+  	<h1 class="visually-hidden">Дизайн-студия Нёрдс</h1>
     <div>
       <p>
         <span>Долго, дорого, скрупулезно.</span> Математически выверенный дизайн для вашего сайта или мобильного приложения. 
@@ -41,7 +41,7 @@
       </a>
     </div>
   	<section>
-  		<h2>Виды услуг</h2>
+  		<h2 class="visually-hidden">Виды услуг</h2>
   		<ul>
   			<li>
   				<h3>ВЕБ-САЙТЫ</h3>
@@ -144,9 +144,25 @@
     </section>
   </main>
   <footer>
-    <form>
-      
-    </form>
+    <section>
+      <h2>Напишите нам</h2>
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <p>
+          <label for="appointment-name">Ваше имя</label>
+          <input id="appointment-name" type="text" name="name" placeholder="Имя Фамилия" required>
+        </p>
+        <p>
+          <label for="appointment-email">Ваш e-mail</label>
+          <input id="appointment-email" type="text" name="email" placeholder="email@example.com" required>
+        </p>
+        <p>
+          <label for="appointment-text">Текст письма</label>
+          <input id="appointment-text" type="text" name="text" placeholder="В свободной форме" required>
+        </p>
+        <button type="submit">Отправить</button>
+      </form>
+      <button type="button">Закрыть</button>
+    </section>
     <a href="#">
         <img src="img/map.png" width="1440" height="416" alt="Карта">
     </a>
