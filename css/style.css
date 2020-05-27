@@ -1,0 +1,23 @@
+:root {
+	--basic-white: #fff;
+	--basic-black: #000;
+	--light-black: #283136;
+
+	--button-red: #FB565A;
+	--button-green:  #00CA74;
+	--button-yellow: #EFC849;
+
+	--special: #eee;
+	--special-gradient: #e1e1e1;
+	--special-form: #666;
+}
+
+body {
+	min-width: 1460px;
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+	
+}
