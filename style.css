@@ -58,7 +58,7 @@ ul {
 }
 
 .main-navigation {
-	font-weight: normal;
+	font-weight: 500;
 	font-size: 16px;
 	line-height: 30px;
 	color: var(--basic-black);
@@ -75,6 +75,21 @@ ul {
 .user-navigation a:hover {
 	color: var(--focus-link);
 }
+
+.description {
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 24px;
+	color: var(--light-black);
+}
+
+.description span {
+	font-weight: 500;
+	font-size: 55px;
+	line-height: 55px;
+	color: var(--basic-black);
+}
+
 .types-products {
 	font-size: 16px;
 	line-height: 24px;
@@ -89,9 +104,17 @@ ul {
 }
 
 .products-item-1 {
-	background-image: url(img/illustration-site.jpg);
 	width: 300px;
 	height: 146px;
+}
+
+.products-item-1 div {
+	display: block;
+	background-repeat: no-repeat;
+	background-image: url(img/illustration-site.jpg);
+	width: 300px;
+	height: 146px; 
+	background-color: var(--button-red);
 }
 
 .products-item-1 a:focus,
@@ -100,10 +123,19 @@ ul {
 }
 
 .products-item-2 {
-	background-image: url(img/illustration-app.jpg);
 	width: 300px;
 	height: 146px;
 }
+
+.products-item-2 div {
+	display: block;
+	background-repeat: no-repeat;
+	background-image: url("img/illustration-app.jpg");
+	width: 300px;
+	height: 146px; 
+	background-color: var(--button-green);
+}
+
 
 .products-item-2 a:focus,
 .products-item-2 a:hover {
@@ -111,9 +143,17 @@ ul {
 }
 
 .products-item-3 {
-	background-image: url(img/illustration-presentation.jpg);
 	width: 300px;
 	height: 146px;
+}
+
+.products-item-3 div {
+	background-image: url(img/illustration-presentation.jpg);
+	display: block;
+	background-repeat: no-repeat;
+	width: 300px;
+	height: 146px; 
+	background-color: var(--button-yellow);
 }
 
 .products-item-3 a:focus,
@@ -172,9 +212,24 @@ ul {
 	width: 81px;
 	height: 81px;
 	/*Тут если использовать var(--special-gradient) вместо #E1E1E1 не мачится текст, поэтому оставил так*/
-	background-color: linear-gradient(0deg, #E1E1E1, #E1E1E1), #FFFFFF;
 }
 
+.vk {
+	display: block;
+    background-repeat: no-repeat;
+	background-image: url("img/vk-icon.svg");
+}
+ .fb {
+ 	display: block;
+    background-repeat: no-repeat;
+ 	background-image: url("img/fb-icon.svg");
+ }
+
+ .inst {
+ 	display: block;
+    background-repeat: no-repeat;
+ 	background-image: url("img/insta-icon.svg");
+ }
 
 /*Правила для catalog.html*/
 
