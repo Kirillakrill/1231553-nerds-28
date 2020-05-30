@@ -36,23 +36,40 @@
   	<h1 class="visually-hidden">Дизайн-студия Нёрдс</h1>    
     <div class="description">
       <span>
-        Любим математику как никто другой
+        Долго, дорого, скурпулезно.
       </span>
       <p>
-         Никакого креатива только математические формулы для расчета идеальных пропорций 
+          Математически выверенный дизайн для вашего сайта или мобильного приложения. 
       </p>
-      <a href="#" class="button">
+      <a href="#" class="button button-red">
          УЗНАТЬ БОЛЬШЕ
       </a>
       <a href="#">
         <img src="#" alt="">
       </a>
     </div>
-    <div class="visually-hidden">
+    <div class="description des-hide">
+      <span>
+        Любим математику как никто другой.
+      </span> 
       <p>
-        <span>Только ночь, только хардкор</span> Работаем днем, как все? Мы против этого. Ближе к получночи работа только начинается. 
+        Никакого креатива только математические формулы для расчета идеальных пропорций. 
       </p>
+      <a href="#" class="button button-red">
+         УЗНАТЬ БОЛЬШЕ
+      </a>
       <a href="#">
+        <img src="#" alt="">
+      </a>
+    </div>
+    <div class="description des-hide">
+      <span>
+        Только ночь, только хардкор
+      </span> 
+      <p>
+        Работаем днем, как все? Мы против этого. Ближе к получночи работа только начинается. 
+      </p>
+      <a href="#" class="button button-red">
          УЗНАТЬ БОЛЬШЕ
       </a>
       <a href="#">
@@ -62,24 +79,24 @@
   	<section class="types-products">
   		<h2 class="visually-hidden">Виды услуг</h2>
   		<ul>
-  			<li class="products-item-1">
-          <div></div>
+  			<li class="products-item">
+          <div class="products-img-site"></div>
   				<h3 class="heading-types-products">ВЕБ-САЙТЫ</h3>
   				<p>
   					Мир никогда не будет прежним после того как увидит ваш сайт!
   				</p>
   				<a href="#" class="button button-red">ЗАКАЗАТЬ</a>
   			</li>
-  			<li class="products-item-2">
-          <div></div>
+  			<li class="products-item">
+          <div class="products-img-app"></div>
   				<h3 class="heading-types-products">ПРИЛОЖЕНИЯ</h3>
   				<p>
   					Покорите топ-10 приложений в AppStore и Google Play
   				</p>
   				<a href="#" class="button button-green">ЗАКАЗАТЬ</a>
   			</li>
-  			<li class="products-item-3">
-          <div></div>
+  			<li class="products-item">
+          <div class="products-img-presentation"></div>
   				<h3 class="heading-types-products">ПРЕЗЕНТАЦИИ</h3>
   				<p>
   					Вы даже не подозреваете, насколько вы изумительны!
@@ -88,7 +105,7 @@
   			</li>
   		</ul>
   	</section>	
-    <section>
+    <section class="about-us">
       <h2>
         Мы — маленькая, но гордая дизайн-студия из Краснодара.
       </h2>
@@ -109,14 +126,12 @@
           Слайдшоу и видео для корпоративных презентаций 
         </li>
       </ul>
-      <a href="#">
-        <img src="#" alt="">
-      </a>
-      <h3>
+      <a href="#" class="nerds-illustration"></a>
+      <h3 class="heading-table">
         с 2004 года Любим точность во всем:
       </h3>
       <table>
-        <tr>
+        <tr class="table-row-1">
           <td>
             146%
           </td>
@@ -127,7 +142,7 @@
             50%
           </td>
         </tr>
-        <tr>
+        <tr class="table-row-2">
           <td>
             Уровень самоотдачи
           </td>
@@ -169,29 +184,29 @@
     </section>
   </main>
   <footer class="main-footer">
-    <section>
+    <section class="popup">
       <h2>Напишите нам</h2>
       <form action="https://echo.htmlacademy.ru" method="post" id="form-read-me">
         <p>
-          <label for="appointment-name">Ваше имя</label>
+          <label for="appointment-name">Ваше имя:</label>
           <input id="appointment-name" type="text" name="name" placeholder="Имя Фамилия" required>
         </p>
         <p>
-          <label for="appointment-email">Ваш e-mail</label>
+          <label for="appointment-email">Ваш e-mail:</label>
           <input id="appointment-email" type="text" name="email" placeholder="email@example.com" required>
         </p>
         <p>
-          <label for="appointment-text">Текст письма</label>
+          <label for="appointment-text">Текст письма:</label>
           <input id="appointment-text" type="text" name="text" placeholder="В свободной форме" required>
         </p>
-        <button type="submit">Отправить</button>
+        <button type="submit" class="button button-red">Отправить</button>
       </form>
       <button type="button">Закрыть</button>
     </section>
-    <section class="popup">
+    <section class="contact-info">
       <h3>Nёrds design studio</h3>
       <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <span>тел. +7 (812) 275-75-75<span></p>
-      <button>Напишите нам</button>
+      <button class="button button-red">Напишите нам</button>
     </section>
     <a href="#">
         <img src="img/map.png" width="1440" height="416" alt="Карта">
@@ -200,7 +215,6 @@
       <h2 class="heading-social-networks">Давайте дружить, это выгодно!</h2>
       <p>Скидка 10% для друзей из социальных сетей.</p>
   		<ul>
-        <!--Не понял как правильно добавить сюда иконки, в демке они уже есть, а по факту нам еще не объяснили как это делать-->
         <li>
           <a href="#" class="social-button vk">
             <span class="visually-hidden">Вконтакте</span>

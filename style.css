@@ -1,5 +1,5 @@
 :root {
-	--basic-white: #fff;
+	--basic-white: #FFF;
 	--basic-black: #000;
 	--light-black: #283136;
 
@@ -7,8 +7,8 @@
 	--button-green:  #00CA74;
 	--button-yellow: #EFC849;
 
-	--special: #eee;
-	--special-gradient: #e1e1e1;
+	--special: #EEE;
+	--special-gradient: #E1E1E1;
 	--special-form: #666;
 	--special-social: #444;
 
@@ -16,6 +16,7 @@
 	--red-focus-button: #E74246;
 	--green-focus-button: #00BC6C;
 	--yellow-focus-button: #EAB534;
+	--grey-focus-button: #DFDFDF;
 }
 
 body {
@@ -90,6 +91,10 @@ ul {
 	color: var(--basic-black);
 }
 
+.des-hide {
+	display: none;
+} 
+
 .types-products {
 	font-size: 16px;
 	line-height: 24px;
@@ -103,12 +108,11 @@ ul {
 	color: var(--basic-black);
 }
 
-.products-item-1 {
+.products-item {
 	width: 300px;
-	height: 146px;
 }
 
-.products-item-1 div {
+.roducts-img-site {
 	display: block;
 	background-repeat: no-repeat;
 	background-image: url(img/illustration-site.jpg);
@@ -117,17 +121,7 @@ ul {
 	background-color: var(--button-red);
 }
 
-.products-item-1 a:focus,
-.products-item-1 a:hover {
-	background-color: var(--red-focus-button);
-}
-
-.products-item-2 {
-	width: 300px;
-	height: 146px;
-}
-
-.products-item-2 div {
+.products-img-app {
 	display: block;
 	background-repeat: no-repeat;
 	background-image: url("img/illustration-app.jpg");
@@ -136,18 +130,7 @@ ul {
 	background-color: var(--button-green);
 }
 
-
-.products-item-2 a:focus,
-.products-item-2 a:hover {
-	background-color: var(--green-focus-button);
-}
-
-.products-item-3 {
-	width: 300px;
-	height: 146px;
-}
-
-.products-item-3 div {
+.products-img-presentation {
 	background-image: url(img/illustration-presentation.jpg);
 	display: block;
 	background-repeat: no-repeat;
@@ -156,12 +139,52 @@ ul {
 	background-color: var(--button-yellow);
 }
 
-.products-item-3 a:focus,
-.products-item-3 a:hover {
-	background-color: var(--yellow-focus-button);
+.about-us {
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 24px;
+	color: var(--light-black);
+}
+
+.about-us h2 {
+	font-weight: 500;
+	font-size: 45px;
+	line-height: 45px;
+	color: var(--basic-black);
+}
+
+.about-us h3 {
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.nerds-illustration {
+	display: block;
+	background-image: url("img/nerds-illustration.png");
+	background-repeat: no-repeat;
+	width: 360px;
+	height: 208px;
+	background-color: var(--special);
+}
+
+.heading-table {
+	text-align: center;
+	color: var(--basic-black);
+}
+
+.table-row-1 {
+	font-weight: bold;
+	font-size: 45px;
+	line-height: 64px;
+	color: var(--basic-black);
+}
+
+.table-row-2 {
+	line-height: 18px;
 }
 
 .button {
+	display: block;
 	font: inherit;
 	font-weight: 500;
 	font-size: 16px;
@@ -172,24 +195,78 @@ ul {
 	border-radius: 3px;
 	width: 160px;
 	height: 50px;
+	border: none;
 }
 
 .button-red {
 	background-color: var(--button-red);
 }
 
+.button-red:hover,
+.button-red:focus {
+	background-color: var(--red-focus-button);
+}
+
 .button-green {
 	background-color: var(--button-green);
+}
+
+.button-green:hover,
+.button-green:focus {
+	background-color: var(--green-focus-button);
 }
 
 .button-yellow {
 	background-color: var(--button-yellow);
 }
 
-.popup {
-	display: none;
+.button-yellow:hover,
+.button-yellow:focus {
+	background-color: var(--yellow-focus-button);
 }
 
+.popup {
+	background-color: var(--basic-white);
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 18px;
+	color: var(--basic-black);
+	box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.popup input {
+	font: inherit;
+	border: 2px solid #D7DCDE;
+	box-sizing: border-box;
+	border-radius: 3px;
+	opacity: 0.5;
+	color: var(--special-social);
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 18px;
+}
+
+.popup h2 {
+	font-weight: bold;
+	font-size: 45px;
+	line-height: 53px;
+}
+
+.contact-info {
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 18px;
+	color: var(--special-form);
+	background-color: var(--basic-white);
+}
+
+.contact-info h3 {
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 30px;
+	text-transform: uppercase;
+	color: var(--basic-black);
+}
 .social-networks {
 	font-size: 16px;
 	line-height: 22px;
@@ -211,23 +288,19 @@ ul {
 .social-button {
 	width: 81px;
 	height: 81px;
+	display: block;
+    background-repeat: no-repeat;
 	/*Тут если использовать var(--special-gradient) вместо #E1E1E1 не мачится текст, поэтому оставил так*/
 }
 
 .vk {
-	display: block;
-    background-repeat: no-repeat;
 	background-image: url("img/vk-icon.svg");
 }
  .fb {
- 	display: block;
-    background-repeat: no-repeat;
  	background-image: url("img/fb-icon.svg");
  }
 
  .inst {
- 	display: block;
-    background-repeat: no-repeat;
  	background-image: url("img/insta-icon.svg");
  }
 
@@ -273,5 +346,27 @@ ul {
 	width: 260px;
 	height: 50px;
 	background-color: var(--special);
+	border: none;
 	border-radius: 3px;
+}
+
+.filter-show-button:hover,
+.filter-show-button:focus {
+	background-color: var(--grey-focus-button);
+}
+
+.products-popup {
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 18px;
+	color: var(--special-form);
+	background-color: var(--special);
+}
+
+.products-popup h3 {
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 30px;
+	text-transform: uppercase;
+	color: var(--basic-black);
 }
