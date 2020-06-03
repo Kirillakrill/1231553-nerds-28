@@ -58,12 +58,49 @@ ul {
   margin: -1px;
 }
 
+.page {
+	height: 100%;
+}
+
+.page-body {
+	min-height: 100%;
+	display: grid;
+	grid-template-rows: 
+		min-content
+		1fr
+		min-content;
+	align-content: start;
+}
+
 .main-navigation {
+	display: flex;
+	justify-content: space-between;
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 30px;
 	color: var(--basic-black);
 	background-color: var(--special); 
+}
+
+.main-header-logo {
+	width: 159.87px;
+	height: 65.02px;
+	margin-left: 140px;
+	margin-top: 49px;
+}
+
+.site-navigation {
+	max-width: 650px;
+	margin: 0;
+	padding: 0;
+}
+
+.user-navigation {
+	margin-right: 140px;
+	margin-top: 70px;
+	max-width: 200px;
+	height: 30px;
+	padding-left: 50px;
 }
 
 .main-navigation a {
@@ -82,6 +119,7 @@ ul {
 	font-size: 16px;
 	line-height: 24px;
 	color: var(--light-black);
+	background-color: var(--special);
 }
 
 .description span {
@@ -99,6 +137,7 @@ ul {
 	font-size: 16px;
 	line-height: 24px;
 	color: var(--light-black); 
+	margin-bottom: 80px;
 }
 
 .heading-types-products {
@@ -108,14 +147,33 @@ ul {
 	color: var(--basic-black);
 }
 
+.products-list {
+	display: grid;
+	grid-template-columns: 
+		1fr
+		1fr
+		1fr;
+	column-gap: 100px;
+	padding: 0;
+	margin: 0;
+}
+
 .products-item {
 	width: 300px;
 }
 
-.roducts-img-site {
+.products-item:first-child {
+	margin-left: 140px;
+}
+
+.products-item:last-child {
+	margin-right: 200px;
+}
+
+.products-img-site {
 	display: block;
 	background-repeat: no-repeat;
-	background-image: url(img/illustration-site.jpg);
+	background-image: url(img/illustration-site.jpg );
 	width: 300px;
 	height: 146px; 
 	background-color: var(--button-red);
@@ -131,8 +189,8 @@ ul {
 }
 
 .products-img-presentation {
-	background-image: url(img/illustration-presentation.jpg);
 	display: block;
+	background-image: url(img/illustration-presentation.jpg);
 	background-repeat: no-repeat;
 	width: 300px;
 	height: 146px; 
@@ -225,33 +283,6 @@ ul {
 	background-color: var(--yellow-focus-button);
 }
 
-.popup {
-	background-color: var(--basic-white);
-	font-weight: bold;
-	font-size: 16px;
-	line-height: 18px;
-	color: var(--basic-black);
-	box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
-}
-
-.popup input {
-	font: inherit;
-	border: 2px solid #D7DCDE;
-	box-sizing: border-box;
-	border-radius: 3px;
-	opacity: 0.5;
-	color: var(--special-social);
-	font-weight: normal;
-	font-size: 16px;
-	line-height: 18px;
-}
-
-.popup h2 {
-	font-weight: bold;
-	font-size: 45px;
-	line-height: 53px;
-}
-
 .contact-info {
 	font-weight: normal;
 	font-size: 16px;
@@ -268,6 +299,11 @@ ul {
 	color: var(--basic-black);
 }
 .social-networks {
+	display: grid;
+	grid-template-columns: 
+		min-content
+		1fr;
+	column-gap: 139px;
 	font-size: 16px;
 	line-height: 22px;
 	color: var(--special-social);
@@ -277,12 +313,7 @@ ul {
 	font-weight: bold;
 	font-size: 36px;
 	line-height: 36px;
-	text-align: center;
 	color: var(--basic-black);
-}
-
-.social-networks p{
-	text-align: center;
 }
 
 .social-button {
@@ -290,7 +321,21 @@ ul {
 	height: 81px;
 	display: block;
     background-repeat: no-repeat;
-	/*Тут если использовать var(--special-gradient) вместо #E1E1E1 не мачится текст, поэтому оставил так*/
+    background-color: var(--special);
+    border-radius: 50%;
+}
+
+.social-networks-text {
+	order: 1;
+	margin-top: 65px;
+	margin-bottom: 74px;
+}
+
+.social-networks-list {
+	display: flex;
+	order: 0;
+	margin-bottom: 68px;
+	margin-top: 68px;
 }
 
 .vk {
@@ -307,13 +352,83 @@ ul {
 /*Правила для catalog.html*/
 
 
+.main-catalog {
+	display: flex;
+	flex-wrap: wrap;
+}
+
 .main-heading {
 	font-weight: 500;
 	font-size: 55px;
 	line-height: 55px;
 	text-align: center;
 	background-color: var(--special);
+	margin-bottom: 108px;
+	
 }
+
+.main-heading-conteiner {
+	width: 100%;
+}
+
+.filters-conteiner { 
+	width: 260px;
+	margin-left: 140px;
+	margin-right: 140px;
+}
+
+.models-conteiner {
+	flex-grow: 1;
+	width: 900px;
+}
+
+.models-list {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.models-item {
+	margin-bottom: 71px;
+}
+
+.models-item:nth-child(1),
+.models-item:nth-child(2) {
+	margin-top: 40px;
+}
+
+.models-item:nth-child(2n) {
+	margin-left: 41px; 
+}
+
+.models-item:nth-child(5),
+.models-item:last-child {
+	margin-bottom: 55px;
+}
+
+.models-navigation {
+	display: flex;
+	margin-left: 540px; 
+}
+
+.filter-show-button {
+	font-size: 16px;
+	line-height: 18px;
+	text-align: center;
+	color: var(--basic-black);
+
+	width: 50px;
+	height: 50px;
+	background-color: var(--special);
+	border: none;
+	border-radius: 3px;
+	margin-left: 11px;
+	margin-right: 11px;
+}
+
+.filter-show-button:last-child {
+	width: 260px;
+}
+
 .net {
 	font: inherit;
 	border: none;
@@ -337,25 +452,13 @@ ul {
 	text-transform: uppercase;
 }
 
-.filter-show-button {
-	font-size: 16px;
-	line-height: 18px;
-	text-align: center;
-	color: var(--basic-black);
-
-	width: 260px;
-	height: 50px;
-	background-color: var(--special);
-	border: none;
-	border-radius: 3px;
-}
-
 .filter-show-button:hover,
 .filter-show-button:focus {
 	background-color: var(--grey-focus-button);
 }
 
 .products-popup {
+	display: none;
 	font-weight: normal;
 	font-size: 16px;
 	line-height: 18px;
@@ -369,4 +472,66 @@ ul {
 	line-height: 30px;
 	text-transform: uppercase;
 	color: var(--basic-black);
+}
+
+/* Всплвающие окна*/
+
+.popup {
+	display: flex;
+	flex-wrap: wrap;
+
+	width: 960px;
+	background-color: var(--basic-white);
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 18px;
+	color: var(--basic-black);
+	box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.popup form {
+	display: flex;
+	flex-wrap: wrap;
+
+	margin-left: 100px;
+	width: 760px;
+}
+
+.popup input {
+	font: inherit;
+	border: 2px solid #D7DCDE;
+	box-sizing: border-box;
+	border-radius: 3px;
+	opacity: 0.5;
+	color: var(--special-social);
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 18px;
+}
+
+.popup h2 {
+	padding-right: 438px;
+	margin-top: 63px;
+	margin-left: 100px;
+	font-weight: bold;
+	font-size: 45px;
+	line-height: 53px;
+}
+
+.button-close {
+	margin-top: 78px;
+	width: 21px;
+	height: 21px;
+}
+
+.input-name{
+	margin-right: 40px;
+}
+
+.input-text {
+	width: 100%;
+}
+
+form .button {
+	margin-top: 47px;
 }
