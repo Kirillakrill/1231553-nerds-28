@@ -33,20 +33,24 @@
   	</nav>
   </header>
   <main>
-  	<h1 class="visually-hidden">Дизайн-студия Нёрдс</h1>    
-    <div class="description">
-      <span>
-        Долго, дорого,<br>скурпулезно.
-      </span>
-      <p>
-          Математически выверенный дизайн для вашего сайта или мобильного приложения. 
-      </p>
-      <a href="#" class="button button-red">
-         УЗНАТЬ БОЛЬШЕ
-      </a>
-      <a href="#">
-        <img src="#" alt="">
-      </a>
+  	<h1 class="visually-hidden">Дизайн-студия Нёрдс</h1>  
+    <div class="background-description">  
+      <div class="description">
+        <div class="description-content">
+          <span>
+            Долго, дорого,<br>скурпулезно.
+          </span>
+          <p> 
+              Математически выверенный дизайн для вашего сайта или мобильного приложения. 
+          </p>
+          <a href="#" class="button button-red">
+             УЗНАТЬ БОЛЬШЕ
+          </a>
+        </div>
+        <a href="#" class="description-slide">
+          <img src="img/nerds-index-slide1.png" alt="графика и три изображения айфона с разными заставками на экране">
+        </a>
+      </div>
     </div>
     <div class="description des-hide">
       <span>
@@ -106,60 +110,64 @@
   		</ul>
   	</section>	
     <section class="about-us">
-      <h2>
-        Мы — маленькая, но гордая дизайн-студия из Краснодара.
-      </h2>
-      <p>
-        Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.
-      </p>
-      <h3>
-        Выполняем заказы на разработку:
-      </h3>
-      <ul>
-        <li>
-          Веб-сайтов любой сложности
-        </li>
-        <li>
-          Мобильных приложений для iOS и Android
-        </li>
-        <li>
-          Слайдшоу и видео для корпоративных презентаций 
-        </li>
-      </ul>
-      <a href="#" class="nerds-illustration"></a>
-      <h3 class="heading-table">
-        с 2004 года Любим точность во всем:
-      </h3>
-      <table>
-        <tr class="table-row-1">
-          <td>
-            146%
-          </td>
-          <td>
-            100%
-          </td>
-          <td>
-            50%
-          </td>
-        </tr>
-        <tr class="table-row-2">
-          <td>
-            Уровень самоотдачи
-          </td>
-          <td>
-            Соблюдение сроков
-          </td>
-          <td>
-            Минимальная предоплата
-          </td>
-        </tr>
-      </table>
+      <div class="about-us-text">
+        <h2>
+          Мы — маленькая, но гордая дизайн-студия из Краснодара.
+        </h2>
+        <p>
+          Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.
+        </p>
+        <h3>
+          Выполняем заказы на разработку:
+        </h3>
+        <ul>
+          <li>
+            Веб-сайтов любой сложности
+          </li>
+          <li>
+            Мобильных приложений для iOS и Android
+          </li>
+          <li>
+            Слайдшоу и видео для корпоративных презентаций 
+          </li>
+        </ul>
+      </div>
+      <div class="about-us-table">
+        <a href="#" class="nerds-illustration"></a>
+        <h3 class="heading-table">
+          с 2004 года Любим точность во всем:
+        </h3>
+        <table>
+          <tr class="table-row-1">
+            <td>
+              146%
+            </td>
+            <td>
+              100%
+            </td>
+            <td>
+              50%
+            </td>
+          </tr>
+          <tr class="table-row-2">
+            <td>
+              Уровень<br>самоотдачи
+            </td>
+            <td>
+              Соблюдение<br>сроков
+            </td>
+            <td>
+              Минимальная<br>предоплата
+            </td>
+          </tr>
+        </table>
+      </div>
     </section>
-    <section>
+    <section class="logo-gallery">
       <h3 class="visually-hidden">
         Галерея логотипов
       </h3>
-      <ul>
+      <ul class="logo-gallery-list">
         <li>
           <a href="#">
             <img src="img/logo-htmlAC.png" width="199" height="68" alt="логотип html Academy">
@@ -186,16 +194,27 @@
   <footer class="main-footer">
     <section class="contact-info">
       <h3>Nёrds design studio</h3>
-      <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <span>тел. +7 (812) 275-75-75<span></p>
-      <button class="button button-red">Напишите нам</button>
+      <p>
+        191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 
+      </p>
+      <span>
+        тел. +7 (812) 275-75-75
+      <span>
+      <button class="button button-red">
+        Напишите нам
+      </button>
     </section>
-    <a href="#">
+    <a href="#" class="map">
         <img src="img/map.png" width="1440" height="416" alt="Карта">
     </a>
   	<div class="social-networks">
       <div class="social-networks-text">
-        <h2 class="heading-social-networks">Давайте дружить, это выгодно!</h2>
-        <p>Скидка 10% для друзей из социальных сетей.</p>
+        <h2 class="heading-social-networks">
+          Давайте дружить, это выгодно!
+        </h2>
+        <p>
+          Скидка 10% для друзей из социальных сетей.
+        </p>
       </div>
   		<ul class="social-networks-list">
         <li>
@@ -216,25 +235,28 @@
       </ul>
   	</div>
   </footer>
-  <section class="popup">
+ <section class="popup">
       <h2>Напишите нам</h2>
+      <button type="button" class="button-close">
+      </button>
       <form action="https://echo.htmlacademy.ru" method="post" id="form-read-me">
-        <p>
+        <p class="input-name">
           <label for="appointment-name">Ваше имя:</label>
           <input id="appointment-name" type="text" name="name" placeholder="Имя Фамилия" required>
         </p>
-        <p>
+        <p class="input-email">
           <label for="appointment-email">Ваш e-mail:</label>
           <input id="appointment-email" type="text" name="email" placeholder="email@example.com" required>
         </p>
-        <p>
+        <p class="input-text">
           <label for="appointment-text">Текст письма:</label>
           <input id="appointment-text" type="text" name="text" placeholder="В свободной форме" required>
         </p>
-        <button type="submit" class="button button-red">Отправить</button>
+        <button type="submit" class="button button-red">
+          Отправить
+        </button>
       </form>
-      <button type="button">Закрыть</button>
-    </section>
+  </section>
   </body>
 </html>
 
