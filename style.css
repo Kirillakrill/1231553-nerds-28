@@ -95,16 +95,19 @@ ul {
 }
 
 .site-navigation {
-	display: grid;
-	grid-template-columns: 
-		min-content
-		min-content
-		min-content
-		min-content;
-	column-gap: 44px;
+	display: flex;
 
 	max-width: 650px;
+	margin: 0 auto;
 	margin-top: 75px;
+}
+
+.site-navigation li:nth-child(odd) {
+	margin-right: 44px;
+}
+
+.site-navigation li:nth-child(2) {
+	margin-right: 48px;
 }
 
 .user-navigation { 	
@@ -303,13 +306,13 @@ ul {
 	line-height: 18px;
 }
 
+.table-row-2 td {
+	width: 119px;
+}
+
 .logo-gallery-list {
-	display: grid;
-	grid-template-columns: 
-		1fr
-		1fr
-		1fr
-		1fr; 
+	display: flex;
+	justify-content: space-between;
 
 	width: 1085px;
 	margin: 0 auto;
@@ -392,16 +395,6 @@ ul {
 	margin-bottom: 47px;
 }
 
-.social-networks {
-	display: grid;
-	grid-template-columns: 
-		min-content
-		1fr;
-	column-gap: 139px;
-	font-size: 16px;
-	line-height: 22px;
-	color: var(--special-social);
-}
 
 .heading-social-networks{
 	font-weight: bold;
@@ -417,23 +410,19 @@ ul {
 }
 
 .social-networks {
-	display: grid;
-	grid-template-columns: 
-		min-content
-		min-content;
+	display: flex;
+	justify-content: space-between;
 
-	column-gap: 139px;
 	width: 1157px;
 	margin: 0 auto;
+	font-size: 16px;
+	line-height: 22px;
+	color: var(--special-social);
 }
 
 .social-networks-list {
-	display: grid;
-	grid-template-columns: 
-		min-content
-		min-content
-		min-content;
-	column-gap: 9px;
+	display: flex;
+	justify-content: space-between;	
 
 	width: 260px;
 	order: 0;
@@ -478,8 +467,17 @@ ul {
 	display: flex;
 	flex-wrap: wrap;
 
-	width: 1440px;
+	width: 100%;
 	margin: 0 auto;
+}
+
+.main-conteiner {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	width: 1160px;
+	margin: 0 auto; 
 }
 
 .main-heading {
@@ -498,13 +496,11 @@ ul {
 
 .filters-conteiner { 
 	width: 260px;
-	margin-left: 140px;
-	margin-right: 140px;
 }
 
 .models-conteiner {
 	flex-grow: 1;
-	width: 900px;
+	width: 761px;
 }
 
 .models-list {
@@ -532,7 +528,8 @@ ul {
 
 .models-navigation {
 	display: flex;
-	margin-left: 540px; 
+	width: 1157px; 
+	margin: 0 auto;
 }
 
 .filter-show-button {
