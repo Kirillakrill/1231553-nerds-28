@@ -10,27 +10,29 @@
   <body class="page-body">
   <header class="main-header">
   	<nav class="main-navigation">
-  		<a href="#" class="main-header-logo">
-  			<img src="img/nerds-logo.svg" width="160" height="65" alt="логотип nёrds">
-  		</a>
-  		<ul class="site-navigation">
-  			<li>
-          <a href="blank.html">студия</a>
-        </li>
-  			<li>
-          <a href="blank.html">клиенты</a>
-        </li>
-  			<li>
-          <a href="catalog.html">магазин</a>
-        </li>
-  			<li>
-          <a href="blank.html">контакты</a>
-        </li>
-  		</ul>
+      <a href="catalog.html" class="main-header-logo">
+        <img src="img/nerds-logo.svg" width="160" height="65" alt="логотип nёrds">
+      </a>
+      <ul class="site-navigation">
+        <li>
+            <a href="index.html">студия</a>
+          </li>
+          <li>
+            <a href="blank.html">клиенты</a>
+          </li>
+          <li>
+            <a href="catalog.html">магазин</a>
+          </li>
+          <li>
+            <a href="blank.html">контакты</a>
+          </li>
+      </ul>
       <div class="user-navigation">
-  		  <a href="blank.html">корзина</a>
+        <a class="cart-link" href="login.html">
+          корзина
+        </a>
       </div>
-  	</nav>
+    </nav>
   </header>
   <main>
   	<h1 class="visually-hidden">Дизайн-студия Нёрдс</h1>  
@@ -198,12 +200,15 @@
         191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 
       </p>
       <span>
-        тел. +7 (812) 275-75-75
+        тел. 
+        <a href="tel:+78122757575">
+          +7 (812) 275-75-75
+        </a>
       <span>
       <button class="button button-red">
         Напишите нам
       </button>
-    </section>
+    </section>    
     <a href="#" class="map">
         <img src="img/map.png" width="1440" height="416" alt="Карта">
     </a>
@@ -239,18 +244,19 @@
       <h2>Напишите нам</h2>
       <button type="button" class="button-close">
       </button>
-      <form action="https://echo.htmlacademy.ru" method="post" id="form-read-me">
-        <p class="input-name">
+      <form class="appointment-form" action="https://echo.htmlacademy.ru" method="post" id="form-read-me">
+        <p class="input-name input">
           <label for="appointment-name">Ваше имя:</label>
-          <input id="appointment-name" type="text" name="name" placeholder="Имя Фамилия" required>
+          <input id="appointment-name" class="appointment-name" type="text" name="name" placeholder="Имя Фамилия" required>
         </p>
-        <p class="input-email">
+        <p class="input-email input" >
           <label for="appointment-email">Ваш e-mail:</label>
-          <input id="appointment-email" type="text" name="email" placeholder="email@example.com" required>
+          <input id="appointment-email"
+          class="appointment-email" type="text" name="email" placeholder="email@example.com" required>
         </p>
-        <p class="input-text">
+        <p class="input-text input">
           <label for="appointment-text">Текст письма:</label>
-          <input id="appointment-text" type="text" name="text" placeholder="В свободной форме" required>
+          <input id="appointment-text" class="appointment-text" type="text" name="text" placeholder="В свободной форме" required>
         </p>
         <button type="submit" class="button button-red">
           Отправить

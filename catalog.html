@@ -10,25 +10,27 @@
 <body class="page-body">
 <header class="main-header">
   	<nav class="main-navigation">
-  		<a href="#" class="main-header-logo">
+  		<a href="catalog.html" class="main-header-logo">
   			<img src="img/nerds-logo.svg" width="160" height="65" alt="логотип nёrds">
   		</a>
   		<ul class="site-navigation">
-  			<li>
-          <a href="index.html">студия</a>
-        </li>
-  			<li>
-          <a href="blank.html">клиенты</a>
-        </li>
-  			<li>
-          <a href="catalog.html">магазин</a>
-        </li>
-  			<li>
-          <a href="blank.html">контакты</a>
-        </li>
+	  		<li>
+	          <a class="nav-link" href="index.html">студия</a>
+	        </li>
+	  		<li>
+	          <a class="nav-link" href="blank.html">клиенты</a>
+	        </li>
+	  		<li>
+	          <a class="nav-link" href="catalog.html">магазин</a>
+	        </li>
+	  		<li>
+	          <a class="nav-link" href="blank.html">контакты</a>
+	        </li>
   		</ul>
       <div class="user-navigation">
-  		  <a href="blank.html">корзина</a>
+  		  <a class="cart-link" href="login.html">
+  		  	корзина
+  		  </a>
       </div>
   	</nav>
   </header>
@@ -84,7 +86,9 @@
 						</li>
 					</ul>
 				</fieldset>
-				<button type="submit" class="filter-show-button">Показать</button>
+				<button type="submit" class="button-grey filter-show-button">
+					Показать
+				</button>
 			</form>
 		</section>
 		<section class="models-conteiner">
@@ -93,7 +97,7 @@
 			</h2>
 			<ul class="models-list">
 				<li class="models-item">
-					<a href="#">
+					<a href="catalog.html">
 						<img src="img/img-sedona.jpg" width="360" height="580" alt="сайт Sedona">
 					</a>
 					<div class="products-popup">
@@ -103,53 +107,53 @@
 					</div>
 				</li>
 				<li class="models-item">
-					<a href="#">
+					<a href="catalog.html">
 						<img src="img/img-pink.jpg" width="360" height="580" alt="сайт Pink">
 					</a>
 					<div class="products-popup">
 						<h3>Pink App</h3>
 						<p>Продуктовый лендинг приложения для iOS и Android</p>
-						<a href="#" class="button button-red">9 900 ₽</a>
+						<a href="catalog.html" class="button button-red">9 900 ₽</a>
 					</div>
 				</li>
 				<li class="models-item">
-					<a href="#">
+					<a href="catalog.html">
 						<img src="img/img-barbershop.jpg" width="360" height="580" alt="сайт Borodinsky">
 					</a>
 					<div class="products-popup">
 						<h3>Barbershop</h3>
 						<p>Сайт салона красоты. Для мужчин, да.</p>
-						<a href="#" class="button button-red">9 900 ₽</a>
+						<a href="catalog.html" class="button button-red">9 900 ₽</a>
 					</div>
 				</li>
 				<li class="models-item">
-					<a href="#">
+					<a href="catalog.html">
 						<img src="img/img-mishka.jpg" width="360" height="580" alt="сайт Mishka">
 					</a>
 					<div class="products-popup">
 						<h3>MISHKA</h3>
 						<p>Интернет-магазин вязаных игрушек</p>
-						<a href="#" class="button button-red">9 900 ₽</a>
+						<a href="catalog.html" class="button button-red">9 900 ₽</a>
 					</div>
 				</li>
 				<li class="models-item">
-					<a href="#">
+					<a href="catalog.html">
 						<img src="img/img-aplus.jpg" width="360" height="580" alt="сайт Aplus">
 					</a>
 					<div class="products-popup">
 						<h3>A Plus</h3>
 						<p>Лендинг курсов повышения квалификации</p>
-						<a href="#" class="button button-red">9 900 ₽</a>
+						<a href="catalog.html" class="button button-red">9 900 ₽</a>
 					</div>
 				</li>
 				<li class="models-item">
-					<a href="#">
+					<a href="catalog.html">
 						<img src="img/img-kvast.jpg" width="360" height="580" alt="сайт Kvast">
 					</a>
 					<div class="products-popup">
 						<h3>Кваст</h3>
 						<p>Промо-сайт производителя крафтового кваса</p>
-						<a href="#" class="button button-red">9 900 ₽</a>
+						<a href="catalog.html" class="button button-red">9 900 ₽</a>
 					</div>
 				</li>
 			</ul>
@@ -157,10 +161,18 @@
 				<h3 class="visually-hidden">
 					Навигация по страницам с шаблонами
 				</h3>
-				<a href="#" class="button filter-show-button">1</a>
-				<a href="#" class="button filter-show-button">2</a>
-				<a href="#" class="button filter-show-button">3</a>
-				<a href="#" class="button filter-show-button">Следующий</a>
+				<a href="#" class="button-grey  button filter-show-button">
+					1
+				</a>
+				<a href="#" class="button-grey  button filter-show-button">
+					2
+				</a>
+				<a href="#" class="button-grey  button filter-show-button">
+					3
+				</a>
+				<a href="#" class="button-grey  button filter-show-button">
+					Следующий
+				</a>
 			</nav>
 		</section>
 	</div>
@@ -212,21 +224,22 @@
       <h2>Напишите нам</h2>
       <button type="button" class="button-close">
       </button>
-      <form action="https://echo.htmlacademy.ru" method="post" id="form-read-me">
-        <p class="input-name">
+      <form class="appointment-form" action="https://echo.htmlacademy.ru" method="post" id="form-read-me">
+        <p class="input-name input">
           <label for="appointment-name">Ваше имя:</label>
-          <input id="appointment-name" type="text" name="name" placeholder="Имя Фамилия" required>
+          <input id="appointment-name" class="appointment-name" type="text" name="name" placeholder="Имя Фамилия" required>
         </p>
-        <p class="input-email">
+        <p class="input-email input" >
           <label for="appointment-email">Ваш e-mail:</label>
-          <input id="appointment-email" type="text" name="email" placeholder="email@example.com" required>
+          <input id="appointment-email"
+          class="appointment-email" type="text" name="email" placeholder="email@example.com" required>
         </p>
-        <p class="input-text">
+        <p class="input-text input">
           <label for="appointment-text">Текст письма:</label>
-          <input id="appointment-text" type="text" name="text" placeholder="В свободной форме" required>
+          <input id="appointment-text" class="appointment-text" type="text" name="text" placeholder="В свободной форме" required>
         </p>
         <button type="submit" class="button button-red">
-        	Отправить
+          Отправить
         </button>
       </form>
     </section>
