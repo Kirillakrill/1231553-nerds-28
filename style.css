@@ -12,7 +12,6 @@
 	--special-form: #666;
 	--special-social: #444;
 
-	--focus-link: #FB565A;
 	--red-focus-button: #E74246;
 	--green-focus-button: #00BC6C;
 	--yellow-focus-button: #EAB534;
@@ -45,11 +44,6 @@ img {
 	max-width: 100%;
 	height: auto;
 }
-
-
-/*Мне показалось более логичным сразу у всех списков убрать изначальное оформление, 
-чтобы не прописывать потом это несколько раз*/
-
 
 ul {
 	list-style: none;
@@ -119,14 +113,8 @@ input[type="radio"].visually-hidden {
 
 }
 
-.site-navigaton .nav-link{
-	position: relative;
-}
-
-.site-navigation a,
-.user-navigation a {
-	display: block;
-	padding: 75px 22px;
+.nav-link:active {
+	border-bottom: 2px solid var(--button-red);
 }
 
 .user-navigation {
@@ -140,6 +128,19 @@ input[type="radio"].visually-hidden {
 	padding: 0;
 }
 
+.site-navigation a,
+.user-navigation a {
+	display: block;
+	padding-right: 22px;
+	padding-left: 22px;
+}
+
+.site-navigation,
+.user-navigation {
+	padding-top: 75px;
+	padding-bottom: 75px;
+}
+
 .user-navigation .cart-link {
 	position: relative;
 }
@@ -147,7 +148,7 @@ input[type="radio"].visually-hidden {
 .cart-link::before {
 	content: "";
 	position: absolute;
-	top: 80px;
+	top: 5px;
 	right: 120px;
 
 	width: 15px;
@@ -167,7 +168,7 @@ input[type="radio"].visually-hidden {
 .site-navigation a:hover,
 .user-navigation a:focus,
 .user-navigation a:hover {
-	color: var(--focus-link);
+	color: var(--button-red);
 }
 
 .background-description {
@@ -518,24 +519,39 @@ input[type="radio"].visually-hidden {
 	margin-bottom: 74px;
 }
 
-.vk {
-	background-position: 50%;
-	background-image: url("img/vk-icon.svg");
+.social-button {
+	position: relative;
 }
 
-.fb {
- 	background-position: 50%;
- 	background-image: url("img/fb-icon.svg");
+.vk svg{
+	position: absolute;
+	top: 40%;
+	left: 34%;
 }
 
-.inst {
- 	background-position: 50%;
- 	background-image: url("img/insta-icon.svg");
+.fb svg{
+	position: absolute;
+	top: 35%;
+	left: 43%;
 }
+
+
+.inst svg{
+	position: absolute;
+	top: 37%;
+	left: 38%;
+}
+
 
 .social-button:hover,
 .social-button:focus {
 	background-color: var(--button-red);
+}
+
+.social-button:active,
+.vk:active {
+	background-color: var(--red-active);
+	fill-opacity: 0.3;
 }
 
 
@@ -548,6 +564,11 @@ input[type="radio"].visually-hidden {
 
 	width: 100%;
 	margin: 0 auto;
+}
+
+.main-heading-conteiner {
+	background-color: var(--special);
+	width: 100%;
 }
 
 .main-conteiner {
@@ -564,13 +585,111 @@ input[type="radio"].visually-hidden {
 	font-size: 55px;
 	line-height: 55px;
 	text-align: center;
-	margin-bottom: 108px;
-	
+	margin-bottom: 108px;	
 }
 
-.main-heading-conteiner {
-	background-color: var(--special);
-	width: 100%;
+.price-filter-heading {
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 30px;
+	text-transform: uppercase;
+	color: var(--basic-black);
+	margin-right: 285px;
+	margin-top: -6px;
+}
+
+.breadcrumbs {
+	display: flex;
+	justify-content: flex-end;
+	position: relative;
+
+	width: 1160px;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 18px;
+	text-transform: uppercase;
+
+	margin: 0;
+	padding: 0;
+}
+
+.crumb-link:hover,
+.crumb-link:focus {
+	opacity: 0.6;
+	cursor: pointer;
+}
+
+.breadcrumbs::after {
+	content: "";
+	position: absolute;
+	top: 63px;
+	left: 1162px;
+
+	width: 11px;
+	height: 10px;
+
+	background-image: url(img/icon-down-dir.svg);
+	background-position: 0 0;
+	background-repeat: no-repeat;
+}
+
+.breadcrumbs::before {
+	content: "";
+	position: absolute;
+	top: 63px;
+	left: 1180px;
+
+	width: 11px;
+	height: 10px;
+
+	background-image: url(img/icon-up-dir.svg);
+	background-position: 0 0;
+	background-repeat: no-repeat;
+
+	opacity: 0.2;
+}
+
+.breadcrumbs:hover:after,
+.breadcrumbs:focus:after,
+.breadcrumbs:hover:before,
+.breadcrumbs:focus:before {
+	opacity: 0.6;
+	cursor: pointer;	
+}
+
+.breadcrumbs li {
+	white-space: nowrap;
+ 	margin-right: 25px;
+ 	margin-top: 61px;
+} 	
+
+.breadcrumbs a {
+	opacity: 0.3;
+	color: var(--basic-black);
+}
+
+.breadcrumbs-heading {
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 30px;
+	text-transform: uppercase;
+	color: var(--basic-black);
+	margin-top: -6px;
+	margin-right: 266px;
+}
+
+
+.net {
+	font: inherit;
+	border: none;
+	font-size: 16px;
+	line-height: 19px;
+	color: var(--light-black);
+}
+
+
+.filters-list {
+	text-decoration: none;
 }
 
 .filters-conteiner { 
@@ -579,11 +698,83 @@ input[type="radio"].visually-hidden {
 	margin-top: 90px; 
 }
 
+.filter-option label{
+	display: block;
+
+	position: relative;
+	cursor: pointer;
+	user-select: none;
+}
+
+.filter-option {
+	margin-bottom: 20px;
+}
+
+.filter-input-checkbox + label::before {
+	content: "";
+	position: absolute;
+	left: -36px;
+
+	width: 23px;
+	height: 23px;
+
+	background-image: url(img/checkbox-off.svg);
+	background-position: 0 0;
+	background-repeat: no-repeat;
+
+	opacity: 0.4;
+}
+
+.filter-input-checkbox:checked + label::before {
+	content: "";
+	position: absolute;
+	left: -36px;
+
+	width: 26px;
+	height: 23px;
+
+	background-image: url(img/checkbox-on.svg);
+	background-position: 0 0;
+	background-repeat: no-repeat;
+
+	opacity: 0.4;
+}
+
+.filter-input-radio + label::before {
+	content: "";
+	position: absolute;
+	left: -36px;
+
+	width: 25px;
+	height: 25px;
+
+	background-image: url(img/radio-off.svg);
+	background-position: 0 0;
+	background-repeat: no-repeat;
+
+	opacity: 0.4;
+} 
+
+.filter-input-radio:checked + label::before {
+	content: "";
+	position: absolute;
+	left: -36px;
+
+	width: 25px;
+	height: 25px;
+
+	background-image: url(img/radio-on.svg);
+	background-position: 0 0;
+	background-repeat: no-repeat;
+
+	opacity: 0.4;
+}
+
 .models-conteiner {
 	flex-grow: 1;
 	width: 760px;
 
-	margin-top: 90px;	
+	margin-top: 48px;	
 }
 
 .models-list {
@@ -624,7 +815,8 @@ input[type="radio"].visually-hidden {
 
 .models-navigation {
 	display: flex;
-	width: 1200px; 
+	
+	width: 445px; 
 	margin: 0 auto;
 }
 
@@ -645,14 +837,6 @@ input[type="radio"].visually-hidden {
 
 .filter-show-button:last-child {
 	width: 260px;
-}
-
-.net {
-	font: inherit;
-	border: none;
-	font-size: 16px;
-	line-height: 19px;
-	color: var(--light-black);
 }
 
 .peculiarity {
@@ -716,7 +900,8 @@ input[type="radio"].visually-hidden {
 	margin: 0 auto;
 }
 
-.popup input {
+.popup input,
+.popup textarea {
 	font: inherit;
 	border: 2px solid #D7DCDE;
 	box-sizing: border-box;
@@ -746,7 +931,8 @@ input[type="radio"].visually-hidden {
 	padding-bottom: 9px;
 }
 
-.input input {
+.input input,
+.input textarea {
 	padding: 16px;
 }
 
@@ -759,6 +945,7 @@ input[type="radio"].visually-hidden {
 .appointment-text{
 	width: 760px;
 	height: 120px;
+	resize: none;
 }
 
 .button-close {
