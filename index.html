@@ -122,14 +122,14 @@
         <h3>
           Выполняем заказы на разработку:
         </h3>
-        <ul>
-          <li>
+        <ul class="develop-list">
+          <li class="develop-list-item">
             Веб-сайтов любой сложности
           </li>
-          <li>
+          <li class="develop-list-item">
             Мобильных приложений для iOS и Android
           </li>
-          <li>
+          <li class="develop-list-item">
             Слайдшоу и видео для корпоративных презентаций 
           </li>
         </ul>
@@ -170,17 +170,17 @@
         Галерея логотипов партнеров
       </h3>
       <ul class="logo-gallery-list">
-        <li>
+        <li class="logo-item-1 logo-item">
           <a href="https://htmlacademy.ru/intensive/htmlcss">
             <img src="img/logo-htmlAC.png" width="199" height="68" alt="логотип html Academy">
           </a>
         </li>
-        <li>
+        <li class="logo-item logo-item-2">
           <a href="#">
             <img src="img/logo-barber.png" width="209" height="90" alt="логотип barbershop Borodinsky">
           </a>
         </li>
-        <li>
+        <li class="logo-item logo-item-3">
           <a href="#">
             <img src="img/logo-pink.png" width="185" height="52" alt="логотип Pink">
           </a>
@@ -193,25 +193,27 @@
       </ul>
     </section>
   </main>
-  <footer class="main-footer">
-    <section class="contact-info">
-      <h3>Nёrds design studio</h3>
-      <p>
-        191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 
-      </p>
-      <span>
-        тел. 
-        <a href="tel:+78122757575">
-          +7 (812) 275-75-75
-        </a>
-      <span>
-      <button class="button button-red">
-        Напишите нам
-      </button>
-    </section>    
-    <a href="#" class="map">
-        <img src="img/map.png" width="1440" height="416" alt="Карта">
-    </a>
+  <footer class="main-footer">   
+    <div class=".contact-conteiner"> 
+      <section class="contact-info">
+        <h3>Nёrds design studio</h3>
+        <p>
+          191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 
+        </p>
+        <span>
+          тел. 
+          <a href="tel:+78122757575">
+            +7 (812) 275-75-75
+          </a>
+        <span>
+        <button class="button button-red">
+          Напишите нам
+        </button>
+      </section>
+      <a href="#" class="map">
+          <img src="img/map.png" width="1440" height="416" alt= "Карта">
+      </a>
+    </div>
   	<div class="social-networks">
       <div class="social-networks-text">
         <h2 class="heading-social-networks">
@@ -243,7 +245,7 @@
       </ul>
   	</div>
   </footer>
- <section class="popup">
+    <section class="popup">
       <h2>Напишите нам</h2>
       <button type="button" class="button-close">
       </button>
@@ -259,13 +261,14 @@
         </p>
         <p class="input-text input">
           <label for="appointment-text">Текст письма:</label>
-          <input id="appointment-text" class="appointment-text" type="text" name="text" placeholder="В свободной форме" required>
+          <textarea id="appointment-text" class="appointment-text" name="text"
+          placeholder="В свободной форме" required></textarea>
         </p>
         <button type="submit" class="button button-red">
           Отправить
         </button>
       </form>
-  </section>
+    </section>
   </body>
 </html>
 
