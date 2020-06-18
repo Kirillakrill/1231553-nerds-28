@@ -10,12 +10,12 @@
   <body class="page-body">
   <header class="main-header">
   	<nav class="main-navigation">
-      <a href="catalog.html" class="main-header-logo">
+      <a href="index.html" class="main-header-logo">
         <img src="img/nerds-logo.svg" width="160" height="65" alt="логотип nёrds">
       </a>
       <ul class="site-navigation">
         <li>
-            <a class="nav-link" href="index.html">студия</a>
+            <a class="nav-link active-nav-link" href="index.html">студия</a>
           </li>
           <li>
             <a class="nav-link" href="blank.html">клиенты</a>
@@ -33,55 +33,62 @@
         </a>
       </div>
     </nav>
-  </header>
-  <main>
-  	<h1 class="visually-hidden">Дизайн-студия Нёрдс</h1>  
-    <div class="background-description">  
-      <div class="description">
-        <div class="description-content">
-          <span>
+    <section class="slider">
+      <ul class="slider-list">
+        <li class="slider-item slide slide-current">
+          <h3 class="slide-title">
             Долго, дорого,<br>скурпулезно.
-          </span>
+          </h3>
           <p> 
-              Математически выверенный дизайн для вашего сайта или мобильного приложения. 
+              Математически выверенный дизайн для<br> вашего сайта или мобильного приложения. 
+          </p>
+          <a href="#" class="button button-red slide-button">
+             УЗНАТЬ БОЛЬШЕ
+          </a>
+          <a href="#" class="slide-img">
+            <img src="img/nerds-index-slide1.png" alt="графика и три изображения телефона с разными заставками на экране">
+          </a>
+        </li>
+        <li class="slider-item slide">
+          <h3 class="slide-title">
+            Любим математику<br>как никто другой.
+          </h3> 
+          <p>
+            Никакого креатива только математические формулы<br>для расчета идеальных пропорций. 
           </p>
           <a href="#" class="button button-red">
              УЗНАТЬ БОЛЬШЕ
           </a>
-        </div>
-        <a href="#" class="description-slide">
-          <img src="img/nerds-index-slide1.png" alt="графика и три изображения айфона с разными заставками на экране">
-        </a>
+          <a href="#" class="slide-img">
+            <img src="img/nerds-index-slide2.png" alt="графика и два изображения компьютеров">
+          </a>
+        </li>
+        <li class="slider-item slide">
+          <h3 class="slide-title">
+            Только ночь,<br>только хардкор
+          </h3> 
+          <p>
+            Работаем днем, как все? Мы против этого.<br> Ближе к получночи работа только начинается. 
+          </p>
+          <a href="#" class="button button-red">
+             УЗНАТЬ БОЛЬШЕ
+          </a>
+          <a href="#" class="slide-img">
+            <img src="img/nerds-index-slide3.png" alt="графика, а также изображение планшета и телефона">
+          </a>
+        </li>
+      </ul>
+      <div class="slider-controls">
+        <button type="button" class="current" aria-label="Первый слайд"></button>
+        <button type="button" aria-label="Второй слайд"></button>
+        <button type="button" aria-label="Третий слайд"></button>
       </div>
-    </div>
-    <div class="description des-hide">
-      <span>
-        Любим математику как никто другой.
-      </span> 
-      <p>
-        Никакого креатива только математические формулы для расчета идеальных пропорций. 
-      </p>
-      <a href="#" class="button button-red">
-         УЗНАТЬ БОЛЬШЕ
-      </a>
-      <a href="#">
-        <img src="#" alt="">
-      </a>
-    </div>
-    <div class="description des-hide">
-      <span>
-        Только ночь, только хардкор
-      </span> 
-      <p>
-        Работаем днем, как все? Мы против этого. Ближе к получночи работа только начинается. 
-      </p>
-      <a href="#" class="button button-red">
-         УЗНАТЬ БОЛЬШЕ
-      </a>
-      <a href="#">
-        <img src="#" alt="">
-      </a>
-    </div>
+    </section>
+  </header>
+  <main>
+  	<h1 class="visually-hidden">
+      Дизайн-студия Нёрдс
+    </h1>  
   	<section class="types-products">
   		<h2 class="visually-hidden">Виды услуг</h2>
   		<ul class="products-list">
@@ -172,40 +179,37 @@
       <ul class="logo-gallery-list">
         <li class="logo-item-1 logo-item">
           <a href="https://htmlacademy.ru/intensive/htmlcss">
-            <img src="img/logo-htmlAC.png" width="199" height="68" alt="логотип html Academy">
+            <img src="img/logo-1.png" width="199" height="68" alt="логотип html Academy" class="img-logo-item">
           </a>
         </li>
         <li class="logo-item logo-item-2">
           <a href="#">
-            <img src="img/logo-barber.png" width="209" height="90" alt="логотип barbershop Borodinsky">
+            <img src="img/logo-2.png" width="209" height="90" alt="логотип barbershop Borodinsky" class="img-logo-item">
           </a>
         </li>
         <li class="logo-item logo-item-3">
           <a href="#">
-            <img src="img/logo-pink.png" width="185" height="52" alt="логотип Pink">
+            <img src="img/logo-3.png" width="185" height="52" alt="логотип Pink" class="img-logo-item">
           </a>
         </li>
         <li>
           <a href="#">
-            <img src="img/logo-mishka.png" width="173" height="84" alt="логотип Mishka">
+            <img src="img/logo-4.png" width="173" height="84" alt="логотип Mishka" class="img-logo-item">
           </a>
         </li>
       </ul>
     </section>
   </main>
   <footer class="main-footer">   
-    <div class=".contact-conteiner"> 
+    <div class="contact-conteiner"> 
       <section class="contact-info">
         <h3>Nёrds design studio</h3>
         <p>
           191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 
         </p>
-        <span>
-          тел. 
           <a href="tel:+78122757575">
             +7 (812) 275-75-75
           </a>
-        <span>
         <button class="button button-red">
           Напишите нам
         </button>
