@@ -28,6 +28,8 @@
 	--toggle-filter: #ABABAB;
 	--toggle-shadow: #CFCFCF;
 
+	--input-border: #D7DCDE;
+	--input-border-hover: #B4B9BB;
 }
 
 body {
@@ -150,8 +152,8 @@ input[type="radio"].visually-hidden {
 .site-navigation a,
 .user-navigation a {
 	display: block;
-	padding-right: 22px;
-	padding-left: 22px;
+	margin-right: 22px;
+	margin-left: 22px;
 }
 
 .site-navigation,
@@ -387,6 +389,8 @@ input[type="radio"].visually-hidden {
 .about-us h3 {
 	font-weight: bold;
 	text-transform: uppercase;
+	font-size: 16px;
+	line-height: 24px;
 }
 
 .table-row-2 td {
@@ -446,11 +450,24 @@ input[type="radio"].visually-hidden {
 	color: var(--basic-black);
 }
 
-.table-row-1 {
+.table-cell {
+	position: relative;
+
 	font-weight: bold;
 	font-size: 45px;
 	line-height: 64px;
 	color: var(--basic-black);
+}
+
+.table-cell span {
+	position: absolute;
+
+	top: 5px;
+
+	font-style: normal;
+	font-weight: bold;
+	font-size: 26px;
+	line-height: 40px;
 }
 
 .table-row-2 {
@@ -473,11 +490,18 @@ input[type="radio"].visually-hidden {
 
 .logo-gallery {
 	display: flex;
+	flex-wrap: wrap;
 	align-items: center;
 
-	min-height: 180px;
+	min-height: 160px;
+	width: 1158px;
+	margin: 0 auto;
 	
 	margin-bottom: 80px;
+}
+
+.logo-gallery-list {
+	display: flex;
 }
 
 .logo-gallery-list::before {
@@ -719,7 +743,8 @@ input[type="radio"].visually-hidden {
 
 .social-networks-list {
 	display: flex;
-	justify-content: space-between;	
+	justify-content: space-between;
+	flex-wrap: wrap;	
 
 	width: 260px;
 	order: 0;
@@ -936,13 +961,21 @@ input[type="radio"].visually-hidden {
 	margin-bottom: 20px;
 }
 
+.net {
+	margin-bottom: 46px;
+}
+
+.peculiarity {
+	margin-bottom: 67px;
+}
+
 .filter-input-checkbox + label::before {
 	content: "";
 	position: absolute;
 	left: -36px;
 	top: -2px;
 
-	width: 19px;
+	width: 21px;
 	height: 19px;
 
 	border: 2px solid #4D4D4D;
@@ -998,12 +1031,21 @@ input[type="radio"].visually-hidden {
 	opacity: 0.4;
 }
 
-.filter-input:hover,
-.filter-input:hover {
-	opacity: 0.9;
+.filter-input-radio + label:hover:before,
+.filter-input-radio + label:focus:before {
+	opacity: 1;
 }
 
-.disabled {
+.filter-input-checkbox + label:hover:before,
+.filter-input-checkbox + label:focus:before {
+	opacity: 1;
+}
+
+.filter-input-checkbox + .disabled {
+	opacity: 0.1;
+}
+
+.filter-input-radio + .disabled {
 	opacity: 0.1;
 }
 
@@ -1045,9 +1087,10 @@ input[type="radio"].visually-hidden {
 
 .breadcrumbs {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;	
 
-	width: 360px;
+	width: 370px;
 	font-weight: normal;
 	font-size: 14px;
 	line-height: 18px;
@@ -1062,6 +1105,14 @@ input[type="radio"].visually-hidden {
 	text-decoration: none;
 	opacity: 0.3;
 	color: var(--basic-black);
+}
+
+.breadcrumbs .active-sort {
+	opacity: 1;
+}
+
+.breadcrumbs a:active {
+	opacity: 1;
 }
 
 .sort-up,
@@ -1118,6 +1169,7 @@ input[type="radio"].visually-hidden {
 
 .models-item {
 	position: relative;
+
 	width: 360px;
 	margin-bottom: 71px;
 }
@@ -1195,51 +1247,52 @@ input[type="radio"].visually-hidden {
 	border: 3px solid var(--active-show-button);
 }
 
-.products-popup {
-	display: none;
-	font-weight: normal;
-	font-size: 16px;
-	line-height: 18px;
-	color: var(--special-form);
-	background-color: var(--special);
-}
-
-.products-popup h3 {
-	font-weight: bold;
-	font-size: 18px;
-	line-height: 30px;
-	text-transform: uppercase;
-	color: var(--basic-black);
-}
-
 /* Всплвающие окна*/
 
 .popup {
-	display: flex;
+	display: none;
 	flex-wrap: wrap;
+	justify-content: center;
 
+	position: fixed;
+
+	top: 10px;
+	left: 0;
+	right: 0;
+	bottom: auto;
+
+	margin: auto;
 	width: 960px;
-	margin: 0 auto;
+	padding-bottom: 84px;
+	padding-top: 63px;
+
 	background-color: var(--basic-white);
 	font-weight: bold;
 	font-size: 16px;
 	line-height: 18px;
 	color: var(--basic-black);
 	box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
+
+	z-index: 22;
+	 
 }
 
-.popup form {
+.popup form {	 	
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: flex-start;
+
+	position: relative;
 
 	width: 760px;
-	margin: 0 auto;
+	margin: 0;
+	padding: 0;
 }
 
 .popup input,
 .popup textarea {
 	font: inherit;
-	border: 2px solid #D7DCDE;
+	border: 2px solid var(--input-border);
 	box-sizing: border-box;
 	border-radius: 3px;
 	opacity: 0.5;
@@ -1249,13 +1302,23 @@ input[type="radio"].visually-hidden {
 	line-height: 18px;
 }
 
+.popup input:hover,
+.popup textarea:hover {
+	border: 2px solid var(--input-border-hover);
+}
+
+.popup input:focus,
+.popup textarea:focus {
+	opacity: 1;
+}
+
 .popup h2 {
-	padding-right: 438px;
-	margin-top: 63px;
-	margin-left: 100px;
+	margin-right: 450px;
 	font-weight: bold;
 	font-size: 45px;
 	line-height: 53px;
+	margin-top: 0px;
+	margin-bottom: 37px;
 }
 
 .input {
@@ -1285,6 +1348,11 @@ input[type="radio"].visually-hidden {
 }
 
 .button-close {
+	position: absolute;
+
+	left: 850px;
+	top: 70px;
+
 	background-image: url(img/close-cross.svg);
 	background-repeat: no-repeat;
 	background-position: 0 0;
@@ -1293,7 +1361,6 @@ input[type="radio"].visually-hidden {
 	width: 21px;
 	height: 21px;
 	opacity: 0.3;
-	margin-top: 78px;
 }
 
 .button-close:hover,
@@ -1317,4 +1384,73 @@ input[type="radio"].visually-hidden {
 .appointment-form .button {
 	padding: 17px 83px;
 }
+
+
+.products-popup {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	position: absolute;
+	z-index: 20;
+
+	bottom: 0px;
+
+	width: 100%;
+
+	padding-bottom: 44px;
+	padding-top: 26px;
+
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 18px;
+	color: var(--special-form);
+	background-color: var(--special);
+}
+
+.products-popup h3 {
+	margin: 0;
+
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 30px;
+	text-transform: uppercase;
+	color: var(--basic-black);
+}
+
+.products-popup h3:hover,
+.products-popup h3:focus {
+	color: var(--button-red);
+	cursor: pointer;
+}
+
+.products-popup h3:active {
+	opacity: 0.3;
+}
+
+.products-popup p {
+	width: 255px;
+	text-align: center;
+	margin-top: 12px;
+	margin-bottom: 32px;
+}
+
+.products-popup .button {
+	padding-left: 72px;
+	padding-right: 72px;
+}
+
+.products-popup .button:active {
+	color: rgba(255, 255, 255, 1);
+}
+
+.models-item > .products-popup {
+	opacity: 0;
+}
+
+.models-item > .products-popup:hover {
+	opacity: 1;	
+}
+
+
 
