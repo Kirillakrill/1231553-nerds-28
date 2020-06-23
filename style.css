@@ -478,70 +478,32 @@ input[type="radio"].visually-hidden {
 	width: 119px;
 }
 
-.logo-gallery-list {
-	display: flex;
-	justify-content: space-between;
-
-	position: relative;
-
-	width: 1085px;
-	margin: 0 auto;
-}
-
 .logo-gallery {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
 
-	min-height: 160px;
+	min-height: 180px;
 	width: 1158px;
 	margin: 0 auto;
 	
 	margin-bottom: 80px;
+	border-bottom: 2px solid var(--special);
+	border-top: 2px solid var(--special);
 }
 
 .logo-gallery-list {
 	display: flex;
-}
+	justify-content: space-between;
+	flex-wrap: wrap;
 
-.logo-gallery-list::before {
-	content: "";
-	position: absolute;	
+	position: relative;
 
-	width: 1158px;
-	height: 2px;
+	width: 1180px;
+	min-height: 180px;
+	margin: 0 auto;
 
-	bottom: 150px;
-	right: -15px;
 
-	background-color: var(--special);
-	background-position: 0 0;
-}
-
-.logo-gallery-list::after {
-	content: "";
-	position: absolute;	
-
-	width: 1158px;
-	height: 2px;
-
-	top: 150px;
-	right: -15px;
-
-	background-color: var(--special);
-	background-position: 0 0;
-}
-
-.logo-item-1 {
-	margin-right: 95px;
-}
-
-.logo-item-2 {
-	margin-right: 105px;
-}
-
-.logo-item-3 {
-	margin-right: 120px;
 }
 
 .logo-item {
@@ -550,19 +512,14 @@ input[type="radio"].visually-hidden {
 	align-items: center;
 
 	align-self: center;
+
+	width: 240px;
+	height: 52px;
+	border-right: 2px solid var(--special);
 }
 
-.logo-item::after {
-	content: "";
-	position: absolute;
-
-	transform: translate(250px);
-
-	width: 2px;
-	height: 52px;
-
-	background-color: var(--special);
-	background-position: 0 0;
+.logo-item:last-child {
+	border: none;
 }
 
 .img-logo-item {
@@ -1312,6 +1269,11 @@ input[type="radio"].visually-hidden {
 	opacity: 1;
 }
 
+.popup input:invalid:not(:placeholder-shown),
+.popup textarea:invalid:not(:placeholder-shown) {
+	border-color: var(--red-focus-button);
+}
+
 .popup h2 {
 	margin-right: 450px;
 	font-weight: bold;
@@ -1448,7 +1410,7 @@ input[type="radio"].visually-hidden {
 	opacity: 0;
 }
 
-.models-item > .products-popup:hover {
+.models-item:hover .products-popup{
 	opacity: 1;	
 }
 
