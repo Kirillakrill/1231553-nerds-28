@@ -224,6 +224,7 @@ input[type="radio"].visually-hidden {
 }
 
 .slide-title {
+	width: 400px;
 	font-weight: 500;
 	font-size: 55px;
 	line-height: 55px;
@@ -281,10 +282,13 @@ input[type="radio"].visually-hidden {
 .types-products {
 	position: relative;
 
+	width: 1157px
+	margin 0 auto;
+
 	font-size: 16px;
 	line-height: 24px;
 	color: var(--light-black); 
-	margin-bottom: 120px;
+	margin-bottom: 80px;
 	margin-top: 80px;
 }
 
@@ -308,20 +312,6 @@ input[type="radio"].visually-hidden {
 	padding: 0;
 	margin: 0 auto;
 	column-gap: 100px;
-}
-
-.products-list::after {
-	content: "";
-	position: absolute;
-
-	width: 1157px;
-	height: 2px;
-
-	top: 437px;
-	left: 5px; 
-
-	background-color: var(--special);
-	background-position: 0 0; 
 }
 
 .products-item {
@@ -369,10 +359,13 @@ input[type="radio"].visually-hidden {
 	width: 1158px;
 	margin: 0 auto;
 	margin-bottom: 75px;
+	padding-top: 40px;
 	font-weight: normal;
 	font-size: 16px;
 	line-height: 24px;
 	color: var(--light-black);
+
+	border-top: 2px solid var(--special);
 }
 
 .about-us-text {
@@ -621,7 +614,6 @@ input[type="radio"].visually-hidden {
 	transform: translate(140px, 55px);
 
 	width: 319px;
-	height: 308px;
 	font-weight: normal;
 	font-size: 16px;
 	line-height: 18px;
