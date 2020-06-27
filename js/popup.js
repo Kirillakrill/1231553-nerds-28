@@ -39,14 +39,20 @@ btnClose.addEventListener("click", function(evt){
 popupForm.addEventListener("submit", function(evt){
 	if (!popupName.value || !popupEmail.value || !popupText.value) {
 		evt.preventDefault();
-		popup.classList.add("popup-eror");
-		popup.offsetWidth = popup.offsetWidth;
-		popup.classList.add("popup-eror");
 	} else {
 		localStorage.setItem("Name", popupName.value);
 		localStorage.setItem("Email", popupEmail.value);
 	}
 });
+
+popupForm.querySelector(".button").addEventListener("click", function(evt){
+	if (!popupName.value || !popupEmail.value || !popupText.value) {
+		evt.preventDefault();
+		popup.classList.add("popup-eror");
+		popup.offsetWidth = popup.offsetWidth;
+		popup.classList.add("popup-eror");
+	}
+})
 
 window.addEventListener("keydown", function(evt) {
 	if (evt.keyCode == 27) {
