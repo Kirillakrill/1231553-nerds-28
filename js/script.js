@@ -48,7 +48,7 @@ popupForm.addEventListener("submit", function(evt){
 popupForm.querySelector(".button").addEventListener("click", function(evt){
 	if (!popupName.value || !popupEmail.value || !popupText.value) {
 		evt.preventDefault();
-		popup.classList.add("popup-eror");
+		popup.classList.remove("popup-eror");
 		popup.offsetWidth = popup.offsetWidth;
 		popup.classList.add("popup-eror");
 	}

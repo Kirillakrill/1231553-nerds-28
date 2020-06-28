@@ -660,6 +660,12 @@ input[type="radio"].visually-hidden {
 .map {
 	position: relative;
 	margin: 0 auto;
+	width: 1440px;
+	height: 416px;
+	background-image: url(img/map.png);
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	z-index: -2;
 }
 
 .map::before {
@@ -676,6 +682,8 @@ input[type="radio"].visually-hidden {
 	background-image: url(img/map-marker.png);
 	background-position: 0 0;
 	background-repeat: no-repeat;
+
+	z-index: -1;
 
 }
 
