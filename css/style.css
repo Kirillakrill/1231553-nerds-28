@@ -116,7 +116,7 @@ min-content;
 
 .nav-link {
     padding-bottom: 15px;
-	border-bottom: 2px solid var(--special);
+    border-bottom: 2px solid var(--special);
 }
 
 .active-nav-link {
@@ -191,7 +191,7 @@ min-content;
 }
 
 .slide p {
-	width: 400px;
+    width: 400px;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -262,8 +262,8 @@ min-content;
 
 .types-products {
     position: relative;
-	width: 1157px;
-	margin: 0 auto;
+    width: 1157px;
+    margin: 0 auto;
     font-size: 16px;
     line-height: 24px;
     color: var(--light-black);
@@ -590,10 +590,9 @@ min-content;
 }
 
 .slide-button {
-	display: flex;
-	flex-wrap: wrap;
-
-	max-width: 132px;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 132px;
     padding-left: 54px;
     padding-right: 54px;
     font-style: normal;
@@ -668,8 +667,6 @@ min-content;
 }
 
 .contact-info-catalog button {
-    white-space: nowrap;
-    width: 215px;
     margin-top: 37.29px;
     margin-bottom: 47px
 }
@@ -1122,7 +1119,7 @@ min-content;
 }
 
 .sort-first {
-	margin-left: 20px;
+    margin-left: 20px;
     margin-right: 17px;
 }
 

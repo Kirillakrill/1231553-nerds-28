@@ -1,18 +1,18 @@
 let btnShow = document.querySelector(".button-popup");
-let btnClose = document.querySelector(".button-close")
+let btnClose = document.querySelector(".button-close");
 let popup = document.querySelector(".popup");
 let popupName = document.querySelector(".appointment-name");
 let popupEmail = document.querySelector(".appointment-email");
-let popupText = document.querySelector(".appointment-text")
+let popupText = document.querySelector(".appointment-text");
 let popupForm = document.querySelector(".appointment-form");
-let isStorageSupport = true;
+let isStorage Sup = true;
 let storage = "";
 let storage2 = "";
 try {
 storage = localStorage.getItem("Name");
 storage2 = localStorage.getItem("Email");
 } catch(err) {
-isStorageSupport = false;
+isStorageSup = false;
 }
 btnShow.addEventListener("click", function(evt) {
 evt.preventDefault();
