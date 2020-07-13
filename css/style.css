@@ -82,6 +82,7 @@ min-content;
 
 .main-header {
     background-color: var(--special);
+        
 }
 
 .main-navigation {
@@ -92,7 +93,7 @@ min-content;
     font-size: 16px;
     line-height: 30px;
     color: var(--basic-black);
-    text-transform: uppercase;
+    text-transform: uppercase; 
 }
 
 .main-header-logo {
@@ -178,7 +179,7 @@ min-content;
     position: relative;
     width: 1157px;
     margin: 0 auto;
-    margin-bottom: 93px;
+    margin-bottom: 83px;
     font-weight: normal;
     font-size: 16px;
     line-height: 24px;
@@ -196,7 +197,7 @@ min-content;
     font-weight: normal;
     font-size: 16px;
     line-height: 24px;
-    margin-bottom: 52px;
+    margin-bottom: 38px;
     margin-top: 0;
 }
 
@@ -204,7 +205,7 @@ min-content;
     position: absolute;
     width: 760px;
     height: 430px;
-    bottom: -92px;
+    bottom: -82px;
     left: 397px;
 }
 
